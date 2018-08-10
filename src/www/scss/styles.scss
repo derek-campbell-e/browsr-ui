@@ -1,0 +1,148 @@
+@import "bootstrap/bootstrap";
+
+$blue: #79adff;
+$blue-gray: #e6e9f2;
+$darker-blue: #485372;
+$dark-blue: #1a1e28;
+
+::selection, webview::selection { background: $dark-blue; color: #fff;/* WebKit/Blink Browsers */ }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  color: $dark-blue;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar-container, .webpage-container {
+  @extend .container-fluid;
+  //padding: 0;
+}
+
+.webpage-container {
+  flex: 1;
+  .webpage-row {
+    height:100%;
+    webview {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.window-action-col {
+  max-width: 130px;
+  display: flex;
+  align-items: center;
+  .row {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+  }
+  .col {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .close-window, .minimize-window, .expand-window {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #79adff;
+    line-height: 15px;
+    font-size: 7.5px;
+    text-align: center;
+  }
+}
+
+.tab {
+  @extend .col;
+  max-width: 250px;
+  height: 42px;
+ 
+  border-left: 4px solid;
+  border-right: 4px solid;
+  border-bottom: 4px solid;
+  border-color: $blue-gray;
+  font-weight: 700;
+  color: $darker-blue;
+  &:hover {
+    border-color: $dark-blue;
+    background-color: $dark-blue;
+    color: #fff;
+  }
+  //border-bottom: 2px solid #79adff;
+  background-color: #fff;
+  border-radius:  5px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  overflow: hidden;
+
+
+  .row {
+    height: 100%;
+  }
+  .favicon, .title, .close {
+    @extend .col;
+    align-items: center;
+    display: flex;
+  }
+  .title {
+    flex: 1;
+    white-space:nowrap;
+    overflow:hidden;
+    padding-left: 2px;
+  }
+  .close,.favicon {
+    padding: 12px;
+    flex: 0;
+  }
+  .favicon {
+    padding-right: 2px;
+  }
+  .favicon img {
+    max-width: 18px;
+  }
+  &:not(:last-child){
+    //border-right: 2px solid #000;
+    margin-right: 4px;
+  }
+}
+
+.searchbar-row {
+  margin-top: 5px;
+}
+
+.goto-col {
+  max-width: 115px;
+}
+.searchbar {
+  @extend .input-group;
+  margin-bottom: 5px!important;
+
+  .input-group-append {
+    margin-left: 15px;
+  }
+  input, button {
+    border: 4px solid #e6e9f2;
+    color: $darker-blue;
+    border-radius: 5px!important;
+    font-weight: 700;
+    &:hover, &:focus {
+      outline: none;
+      box-shadow: none;
+      border-color: $blue;
+      background-color: transparent;
+      color: $darker-blue;
+    }
+  }
+  button {
+    border-radius: 5px;
+  }
+}

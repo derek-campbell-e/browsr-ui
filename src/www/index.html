@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class='top-bar-container container-fluid'>
+      <div class='row tabs-row window-action-row'>
+        <div class='col window-action-col'>
+          <div class='row'>
+
+            <div class='col'>
+              <div class='close-window'>x</div>
+              <div class='minimize-window'>-</div>
+              <div class='expand-window'>+</div>
+            </div>
+
+          </div>
+        </div>
+        <div class='col tabs-col'>
+          <div class='row'>
+
+            <div class='tab'>
+              <div class='row'>
+                <div class='favicon'><img src='https://dtac.digalert.org//s/-12whva/78001/ae78f9b8cdeb0c12cddb8cb62905285b/_/favicon.ico'></div>
+                <div class='title'>[DAC-537] Meraki Phone Call Issue - DigAlert TAC</div>
+                <div class='close'>&multimap;</div>
+              </div>
+            </div>
+
+
+            <div class='tab'>
+                <div class='row'>
+                  <div class='favicon'></div>
+                  <div class='title'>A New Tab</div>
+                  <div class='close'>&multimap;</div>
+                </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+      <div class='row goto-row searchbar-row'>
+        <div class='col goto-col'>
+
+          <div class='row'>
+            <div class='col'>
+              <div class='close-window'></div>
+              <div class='minimize-window'></div>
+              <div class='expand-window'></div>
+            </div>
+          </div>
+
+        </div>
+        <div class='col searchbar-col'>
+          <div class='row'>
+            <div class='col searchbar-wrapper'>
+                <div class="input-group mb-3 searchbar">
+                    <input type="text" class="form-control" placeholder="URL or search term" aria-label="search bar" aria-describedby="search bar" value='http://www.google.com/q?=where+do+the+wild+things+go'>
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button">SEARCH</button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='webpage-container container-fluid'>
+      <div class='row webpage-row'>
+        <webview id="foo" src="https://www.google.com/" style="display:inline-flex;"></webview>
+      </div>
+    </div>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+const Browsr = require('./src/browsr');
